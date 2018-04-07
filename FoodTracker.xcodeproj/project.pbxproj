@@ -16,6 +16,7 @@
 		4A3463BA2078830A002D73BF /* FoodTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3463B92078830A002D73BF /* FoodTrackerTests.m */; };
 		4A3463C52078830B002D73BF /* FoodTrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3463C42078830B002D73BF /* FoodTrackerUITests.m */; };
 		4A698D732078ED9F00CEF6BA /* RatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A698D722078ED9F00CEF6BA /* RatingControl.m */; };
+		4A698D7620790A6500CEF6BA /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A698D7520790A6500CEF6BA /* Meal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		4A3463C62078830B002D73BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A698D712078ED9F00CEF6BA /* RatingControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RatingControl.h; sourceTree = "<group>"; };
 		4A698D722078ED9F00CEF6BA /* RatingControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RatingControl.m; sourceTree = "<group>"; };
+		4A698D7420790A6500CEF6BA /* Meal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
+		4A698D7520790A6500CEF6BA /* Meal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				4A3463A12078830A002D73BF /* AppDelegate.m */,
 				4A3463A32078830A002D73BF /* ViewController.h */,
 				4A3463A42078830A002D73BF /* ViewController.m */,
+				4A698D7420790A6500CEF6BA /* Meal.h */,
+				4A698D7520790A6500CEF6BA /* Meal.m */,
 				4A698D712078ED9F00CEF6BA /* RatingControl.h */,
 				4A698D722078ED9F00CEF6BA /* RatingControl.m */,
 				4A3463A62078830A002D73BF /* Main.storyboard */,
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A698D7620790A6500CEF6BA /* Meal.m in Sources */,
 				4A698D732078ED9F00CEF6BA /* RatingControl.m in Sources */,
 				4A3463A52078830A002D73BF /* ViewController.m in Sources */,
 				4A3463B02078830A002D73BF /* main.m in Sources */,

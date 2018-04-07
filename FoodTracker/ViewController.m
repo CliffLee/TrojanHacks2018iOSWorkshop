@@ -28,10 +28,6 @@
 
 /* Actions */
 
-- (IBAction)setDefaultLabelText:(id)sender {
-    _mealNameLabel.text = @"Default Text";
-}
-
 /* Delegate Functions */
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [_nameTextField resignFirstResponder];
