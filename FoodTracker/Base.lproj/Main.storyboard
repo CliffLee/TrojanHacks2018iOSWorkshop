@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,11 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qOj-vw-kZm">
-                                <rect key="frame" x="10" y="40" width="355" height="96.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qOj-vw-kZm">
+                                <rect key="frame" x="10" y="40" width="355" height="539.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-to-8Rl">
-                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
+                                        <rect key="frame" x="134.5" y="0.0" width="86.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -33,12 +34,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUY-gy-UDZ">
-                                        <rect key="frame" x="0.0" y="66.5" width="151" height="30"/>
-                                        <state key="normal" title="Set Default Label Text"/>
-                                    </button>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="5y5-ef-tWr">
+                                        <rect key="frame" x="0.0" y="66.5" width="355" height="355"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5y5-ef-tWr" secondAttribute="height" multiplier="1:1" id="A4r-A6-LyB"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="zrv-o2-Y6t" appends="YES" id="SsU-36-Jfe"/>
+                                        </connections>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XcU-ez-ZKq" customClass="RatingControl">
+                                        <rect key="frame" x="77.5" y="429.5" width="200" height="110"/>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5y5-ef-tWr" secondAttribute="trailing" id="idx-YU-gvF"/>
                                     <constraint firstAttribute="trailing" secondItem="5sX-Br-uU2" secondAttribute="trailing" id="rrG-dM-J4X"/>
                                 </constraints>
                             </stackView>
@@ -51,10 +62,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="Lxk-to-8Rl" id="V8E-XL-pKH"/>
+                        <outlet property="nameTextField" destination="5sX-Br-uU2" id="J7O-IG-wJG"/>
+                        <outlet property="photoImageView" destination="5y5-ef-tWr" id="ILA-d2-8Q9"/>
+                        <outlet property="ratingControl" destination="XcU-ez-ZKq" id="nwO-oM-44I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zrv-o2-Y6t">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="PxS-iH-n1T"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="320" height="320"/>
+    </resources>
 </document>

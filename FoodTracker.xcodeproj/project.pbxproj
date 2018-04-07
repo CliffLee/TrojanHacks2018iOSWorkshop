@@ -15,6 +15,7 @@
 		4A3463B02078830A002D73BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3463AF2078830A002D73BF /* main.m */; };
 		4A3463BA2078830A002D73BF /* FoodTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3463B92078830A002D73BF /* FoodTrackerTests.m */; };
 		4A3463C52078830B002D73BF /* FoodTrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3463C42078830B002D73BF /* FoodTrackerUITests.m */; };
+		4A698D732078ED9F00CEF6BA /* RatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A698D722078ED9F00CEF6BA /* RatingControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		4A3463C02078830B002D73BF /* FoodTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3463C42078830B002D73BF /* FoodTrackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodTrackerUITests.m; sourceTree = "<group>"; };
 		4A3463C62078830B002D73BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A698D712078ED9F00CEF6BA /* RatingControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RatingControl.h; sourceTree = "<group>"; };
+		4A698D722078ED9F00CEF6BA /* RatingControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RatingControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				4A3463A12078830A002D73BF /* AppDelegate.m */,
 				4A3463A32078830A002D73BF /* ViewController.h */,
 				4A3463A42078830A002D73BF /* ViewController.m */,
+				4A698D712078ED9F00CEF6BA /* RatingControl.h */,
+				4A698D722078ED9F00CEF6BA /* RatingControl.m */,
 				4A3463A62078830A002D73BF /* Main.storyboard */,
 				4A3463A92078830A002D73BF /* Assets.xcassets */,
 				4A3463AB2078830A002D73BF /* LaunchScreen.storyboard */,
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A698D732078ED9F00CEF6BA /* RatingControl.m in Sources */,
 				4A3463A52078830A002D73BF /* ViewController.m in Sources */,
 				4A3463B02078830A002D73BF /* main.m in Sources */,
 				4A3463A22078830A002D73BF /* AppDelegate.m in Sources */,

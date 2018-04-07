@@ -17,13 +17,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    _nameTextField.delegate = self;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+/* Actions */
+
+- (IBAction)setDefaultLabelText:(id)sender {
+    _mealNameLabel.text = @"Default Text";
+}
+
+/* Delegate Functions */
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [_nameTextField resignFirstResponder];
+    
+    return TRUE;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    _mealNameLabel.text = textField.text;
+}
+
+- (IBAction)selectImageFromPhotoLibrary:(UITapGestureRecognizer *)sender {
+    // Hide the keyboard.
+    [_nameTextField resignFirstResponder];
+    
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePickerController.delegate = self;
+    
+    [self presentViewController:imagePickerController animated:TRUE completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:true completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    UIImage *selectedImage = info[UIImagePickerControllerOriginalImage];
+    if (selectedImage == nil) {
+        return;
+    }
+    
+    _photoImageView.image = selectedImage;
+    
+    [picker dismissViewControllerAnimated:true completion:nil];
+}
 
 @end
