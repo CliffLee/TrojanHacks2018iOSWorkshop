@@ -18,6 +18,10 @@
     
     [self setupButtons];
     
+    [_ratingButtons enumerateObjectsUsingBlock:^(UIButton *btn, NSUInteger idx, BOOL *stop) {
+        btn.selected = idx < _rating;
+    }];
+    
     return self;
 }
 

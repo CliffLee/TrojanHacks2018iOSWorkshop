@@ -15,4 +15,6 @@
 @property (strong, nonatomic) UIImage* photo;
 @property (nonatomic) int rating;
 
+- (instancetype)init:(NSString *)name :(UIImage *)photo :(int)rating;
+
 @end

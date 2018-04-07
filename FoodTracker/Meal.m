@@ -10,7 +10,7 @@
 
 @implementation Meal
 
-- (instancetype)init:(NSString *)name :(UIImage *)photo :(int) rating {
+- (instancetype)init:(NSString *)name :(UIImage *)photo :(int)rating {
     self = [super init];
     
     if (name == nil || rating < 0 || rating > 5) {
