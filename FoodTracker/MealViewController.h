@@ -8,17 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "RatingControl.h"
+#import "Meal.h"
 
-@interface ViewController : UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface MealViewController : UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 /* IBOutlets */
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UILabel *mealNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 @property (weak, nonatomic) IBOutlet RatingControl *ratingControl;
+
+@property (strong, nonatomic) Meal *meal;
+
 /* Actions */
-- (IBAction)setDefaultLabelText:(id)sender;
+- (IBAction)cancel:(UIBarButtonItem *)sender;
+
 
 @end
 

@@ -6,17 +6,26 @@
 //  Copyright © 2018 Clifford Lee. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MealViewController.h"
+#import "Meal.h"
 
-@interface ViewController ()
+@interface MealViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MealViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    Meal *m = _meal;
+    if (m != nil) {
+        self.navigationItem.title = [_meal name];
+        self.nameTextField.text = [_meal name];
+        self.photoImageView.image = [_meal photo];
+        self.ratingControl.rating = [_meal rating];
+    }
     
     _nameTextField.delegate = self;
 }
@@ -36,7 +45,7 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    _mealNameLabel.text = textField.text;
+
 }
 
 - (IBAction)selectImageFromPhotoLibrary:(UITapGestureRecognizer *)sender {
@@ -63,6 +72,23 @@
     _photoImageView.image = selectedImage;
     
     [picker dismissViewControllerAnimated:true completion:nil];
+}
+
+/* Navigation */
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+    
+    UIBarButtonItem *saveBtn = sender;
+    
+    NSString *name = _nameTextField.text;
+    UIImage *photo = _photoImageView.image;
+    int rating = _ratingControl.rating;
+    
+    _meal = [[Meal alloc] init:name :photo :rating];
+}
+
+- (IBAction)cancel:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 @end

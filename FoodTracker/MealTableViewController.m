@@ -7,6 +7,7 @@
 //
 
 #import "MealTableViewController.h"
+#import "MealViewController.h"
 #import "MealTableViewCell.h"
 #import "Meal.h"
 
@@ -73,6 +74,21 @@
     return cell;
 }
 
+- (IBAction)unwindToMealList:(UIStoryboardSegue*)sender {
+    MealViewController *src = sender.sourceViewController;
+    if (src != nil) {
+        Meal *meal = [src meal];
+        
+        NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:[_meals count] inSection:0];
+        
+        [_meals addObject:meal];
+        NSMutableArray *indexPaths = [[NSMutableArray alloc] init];
+        [indexPaths addObject:newIndexPath];
+        
+        [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -107,14 +123,36 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    [super prepareForSegue:segue sender:sender];
+    
+    int detailSegueValue = 0;
+    if ([segue.identifier  isEqual: @"ShowDetail"]) {
+        detailSegueValue = 0;
+    } else if ([segue.identifier  isEqual: @"AddItem"]) {
+        detailSegueValue = 1;
+    }
+    
+    switch (detailSegueValue) {
+        case 0: {
+            MealViewController *MVC = [segue destinationViewController];
+            MealTableViewCell *cell = sender;
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+            
+            MVC.meal = _meals[indexPath.row];
+            break;
+        }
+        case 1:
+            break;
+        default:
+            break;
+    }
 }
-*/
+
 
 @end

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A3463A22078830A002D73BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3463A12078830A002D73BF /* AppDelegate.m */; };
-		4A3463A52078830A002D73BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3463A42078830A002D73BF /* ViewController.m */; };
+		4A3463A52078830A002D73BF /* MealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3463A42078830A002D73BF /* MealViewController.m */; };
 		4A3463A82078830A002D73BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3463A62078830A002D73BF /* Main.storyboard */; };
 		4A3463AA2078830A002D73BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3463A92078830A002D73BF /* Assets.xcassets */; };
 		4A3463AD2078830A002D73BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3463AB2078830A002D73BF /* LaunchScreen.storyboard */; };
@@ -42,8 +42,8 @@
 		4A34639D2078830A002D73BF /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3463A02078830A002D73BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A3463A12078830A002D73BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4A3463A32078830A002D73BF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4A3463A42078830A002D73BF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4A3463A32078830A002D73BF /* MealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealViewController.h; sourceTree = "<group>"; };
+		4A3463A42078830A002D73BF /* MealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealViewController.m; sourceTree = "<group>"; };
 		4A3463A72078830A002D73BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A3463A92078830A002D73BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A3463AC2078830A002D73BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 				4A698D7B2079154900CEF6BA /* MealTableViewController.m */,
 				4A698D712078ED9F00CEF6BA /* RatingControl.h */,
 				4A698D722078ED9F00CEF6BA /* RatingControl.m */,
-				4A3463A32078830A002D73BF /* ViewController.h */,
-				4A3463A42078830A002D73BF /* ViewController.m */,
+				4A3463A32078830A002D73BF /* MealViewController.h */,
+				4A3463A42078830A002D73BF /* MealViewController.m */,
 				4A3463A62078830A002D73BF /* Main.storyboard */,
 				4A3463A92078830A002D73BF /* Assets.xcassets */,
 				4A3463AB2078830A002D73BF /* LaunchScreen.storyboard */,
@@ -289,7 +289,7 @@
 				4A698D7C2079154900CEF6BA /* MealTableViewController.m in Sources */,
 				4A698D7620790A6500CEF6BA /* Meal.m in Sources */,
 				4A698D732078ED9F00CEF6BA /* RatingControl.m in Sources */,
-				4A3463A52078830A002D73BF /* ViewController.m in Sources */,
+				4A3463A52078830A002D73BF /* MealViewController.m in Sources */,
 				4A3463B02078830A002D73BF /* main.m in Sources */,
 				4A3463A22078830A002D73BF /* AppDelegate.m in Sources */,
 			);
